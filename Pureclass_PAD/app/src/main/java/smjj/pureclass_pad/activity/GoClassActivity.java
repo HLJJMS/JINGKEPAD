@@ -97,6 +97,8 @@ public class GoClassActivity extends BaseActivity implements View.OnClickListene
     private GoClassAdapter endAdapter;
     private Handler mHandler;
     private SharedPreferences spConfig;
+    //活动列表，最大数量
+    private int max;
     //声明UI控件 及布局容器
     private FrameLayout frameLayout;
     private DrawerLayout drawerLayout;
@@ -110,7 +112,7 @@ public class GoClassActivity extends BaseActivity implements View.OnClickListene
 
     private List<String> titleList;
 
-    private LinearLayout ll_sign_group, ll_induction_test, ll_scene_import, ll_study_new,ll_sign_groupstart,ll_ranking_start,ll_class_recordstart
+    private LinearLayout ll_ranking, ll_sign_group, ll_induction_test, ll_scene_import, ll_study_new,ll_sign_groupstart,ll_ranking_start,ll_class_recordstart
            , ll_go_out_test, ll_class_record, ll_happy, ll_back, ll_responder, ll_red_packet,ll_happystart,ll_responderstart,ll_red_packetstart,ll_backstart;
 
 
@@ -202,7 +204,7 @@ public class GoClassActivity extends BaseActivity implements View.OnClickListene
 
         autoSkipButton();
 
-        addTitleList();
+
 
         //初始化菜单
         initView();
@@ -253,7 +255,7 @@ public class GoClassActivity extends BaseActivity implements View.OnClickListene
         TextPaint tp = title_tv.getPaint();
         tp.setFakeBoldText(true);
         tp.setTextSize(30);
-        title_tv.setText(titleList.get(0));
+
 
         TextPaint tp1 = tv_time.getPaint();
         tp1.setFakeBoldText(true);
@@ -277,23 +279,23 @@ public class GoClassActivity extends BaseActivity implements View.OnClickListene
 
             @Override
             public void onDrawerOpened(View drawerView) {
-                if (!currentTitle.equals(titleList.get(8)) && !currentTitle.equals(titleList.get(10))) {
-                    closeFloatingMenu();
-                    rightLowerButton.setVisibility(View.GONE);
-                }
+//                if (!currentTitle.equals(titleList.get(8)) && !currentTitle.equals(titleList.get(10))) {
+//                    closeFloatingMenu();
+//                    rightLowerButton.setVisibility(View.GONE);
+//                }
 
             }
 
             @Override
             public void onDrawerClosed(View drawerView) {
-                if (!currentTitle.equals(titleList.get(8)) && !currentTitle.equals(titleList.get(10))) {
-                    rightLowerButton.setVisibility(View.VISIBLE);
-                }
-                if (currentTitle.equals(titleList.get(7)) || currentTitle.equals(titleList.get(8))) {
-                    rlIcon1.setImageDrawable(getResources().getDrawable(R.drawable.xiayibu1));
-                } else {
-                    rlIcon1.setImageDrawable(getResources().getDrawable(R.drawable.xiayibu));
-                }
+//                if (!currentTitle.equals(titleList.get(8)) && !currentTitle.equals(titleList.get(10))) {
+//                    rightLowerButton.setVisibility(View.VISIBLE);
+//                }
+//                if (currentTitle.equals(titleList.get(7)) || currentTitle.equals(titleList.get(8))) {
+//                    rlIcon1.setImageDrawable(getResources().getDrawable(R.drawable.xiayibu1));
+//                } else {
+//                    rlIcon1.setImageDrawable(getResources().getDrawable(R.drawable.xiayibu));
+//                }
             }
 
             @Override
@@ -2173,52 +2175,48 @@ public class GoClassActivity extends BaseActivity implements View.OnClickListene
 
     private void initPopList() {
 
-        if (!title.equals(currentTitle)) {
-            title = currentTitle;
-            PWSelectTV = "";
-            filtrateList.clear();
-            if (title.equals(titleList.get(1))) {
-                filtrateList.add("查看试题");
-//                filtrateList.add("学生排名");
-//                filtrateList.add("小组排名");
-                filtrateList.add("答案解析");
-            } else if (title.equals(titleList.get(4))) {
-                filtrateList.add("查看套题");
-                filtrateList.add("答案解析");
-            } else if (title.equals(titleList.get(5))) {
-                filtrateList.add("查看练习");
-                filtrateList.add("答案解析");
-
-            } else if (title.equals(titleList.get(7))) {
-                filtrateList.add("查看试题");
-//                filtrateList.add("学生排名");
-//                filtrateList.add("小组排名");
-                filtrateList.add("答案解析");
-
-            } else if (title.equals(titleList.get(8))) {
-                filtrateList.add("个人积分榜");
-                filtrateList.add("小组积分榜");
-            }
-        }
-        filtrateAdapter.notifyDataSetChanged();
+//        if (!title.equals(currentTitle)) {
+//            title = currentTitle;
+//            PWSelectTV = "";
+//            filtrateList.clear();
+//            if (title.equals(titleList.get(1))) {
+//                filtrateList.add("查看试题");
+////                filtrateList.add("学生排名");
+////                filtrateList.add("小组排名");
+//                filtrateList.add("答案解析");
+//            } else if (title.equals(titleList.get(4))) {
+//                filtrateList.add("查看套题");
+//                filtrateList.add("答案解析");
+//            } else if (title.equals(titleList.get(5))) {
+//                filtrateList.add("查看练习");
+//                filtrateList.add("答案解析");
+//
+//            } else if (title.equals(titleList.get(7))) {
+//                filtrateList.add("查看试题");
+////                filtrateList.add("学生排名");
+////                filtrateList.add("小组排名");
+//                filtrateList.add("答案解析");
+//
+//            } else if (title.equals(titleList.get(8))) {
+//                filtrateList.add("个人积分榜");
+//                filtrateList.add("小组积分榜");
+//            }
+//        }
+//        filtrateAdapter.notifyDataSetChanged();
 
     }
 
 
-    private void addTitleList() {
+    private void addTitleList(List<A001002Bean.TablesBean.TableBean.RowsBean> bean) {
         titleList = new ArrayList<>();
         titleList.add("签到分组");
-        titleList.add("入门测");
-        titleList.add("情景导入");
-        titleList.add("学习新知");
-        titleList.add("深化应用");
-        titleList.add("巩固练习");
-        titleList.add("课堂小结");
-        titleList.add("出门考");
+        for(int i = 0 ;i<bean.size();i++){
+            titleList.add(bean.get(i).getMenuName());
+        }
         titleList.add("排名");
         titleList.add("课堂记录");
         titleList.add("开心一刻");
-
+        title_tv.setText(titleList.get(0));
     }
 
     public void showLoading() {
@@ -2409,6 +2407,8 @@ public class GoClassActivity extends BaseActivity implements View.OnClickListene
                                     endAdapter.setData(Abean.getTables().getTable().getRows());
 //                                    setData(Abean.getTables().getTable().getRows());
                                 }
+                                max = Abean.getTables().getTable().getRows().size();
+                                addTitleList(Abean.getTables().getTable().getRows());
                             }
                         } else {
                             AlertDialogUtil.showAlertDialog(context, "提示", "服务器返回数据有误");
@@ -2432,7 +2432,7 @@ public class GoClassActivity extends BaseActivity implements View.OnClickListene
         ll_back = (LinearLayout) findViewById(R.id.ll_back);
         ll_responder = (LinearLayout) findViewById(R.id.ll_responder);
         ll_red_packet = (LinearLayout) findViewById(R.id.ll_red_packet);
-
+        ll_ranking = (LinearLayout)findViewById(R.id.ll_ranking);
         //start  的 侧滑
         ll_sign_groupstart = (LinearLayout) findViewById(R.id.ll_sign_groupstart);
         ll_ranking_start = (LinearLayout) findViewById(R.id.ll_ranking_start);
@@ -2459,29 +2459,40 @@ public class GoClassActivity extends BaseActivity implements View.OnClickListene
                     showFragmentAtPosition1(signGroupFragment);
                 }
 
-
+                drawerLayout.closeDrawers();
+            }
+        });
+        ll_ranking_start.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (rankingFragment == null){
+                    rankingFragment = new RankingFragment();
+                }
+                commonSet(max+1);
+                showFragmentAtPosition1(rankingFragment);
+                drawerLayout.closeDrawers();
             }
         });
         ll_class_recordstart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                commonSet(9);
+                commonSet(max+2);
                 if (classRecordFragment == null) {
                     classRecordFragment = new ClassRecordFragment();
                 }
                 showFragmentAtPosition1(classRecordFragment);
-
+                drawerLayout.closeDrawers();
             }
         });
         ll_happystart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                commonSet(10);
+                commonSet(max+3);
                 if (happyFragment == null) {
                     happyFragment = new HappyFragment();
                 }
                 showFragmentAtPosition1(happyFragment);
-
+                drawerLayout.closeDrawers();
             }
         });
         ll_backstart.setOnClickListener(new View.OnClickListener() {
@@ -2521,30 +2532,41 @@ public class GoClassActivity extends BaseActivity implements View.OnClickListene
                     }
                     showFragmentAtPosition1(signGroupFragment);
                 }
+                drawerLayout.closeDrawers();
 
-
+            }
+        });
+        ll_ranking.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (rankingFragment == null){
+                    rankingFragment = new RankingFragment();
+                }
+                commonSet(max+1);
+                showFragmentAtPosition1(rankingFragment);
+                drawerLayout.closeDrawers();
             }
         });
         ll_class_record.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                commonSet(9);
+                commonSet(max+2);
                 if (classRecordFragment == null) {
                     classRecordFragment = new ClassRecordFragment();
                 }
                 showFragmentAtPosition1(classRecordFragment);
-
+                drawerLayout.closeDrawers();
             }
         });
         ll_happy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                commonSet(10);
+                commonSet(max+3);
                 if (happyFragment == null) {
                     happyFragment = new HappyFragment();
                 }
                 showFragmentAtPosition1(happyFragment);
-
+                drawerLayout.closeDrawers();
             }
         });
         ll_back.setOnClickListener(new View.OnClickListener() {
@@ -2579,56 +2601,69 @@ public class GoClassActivity extends BaseActivity implements View.OnClickListene
     }
 
     //获取  菜单名称
-    public void getTypeName(String name) {
+    public void getTypeName(String name,int position) {
         switch (name) {
             case "入门测":
                 if (inductionTestFragment == null) {
                     inductionTestFragment = new InductionTestFragment();
 
                 }
+                commonSet(position+1);
                 showFragmentAtPosition1(inductionTestFragment);
+                drawerLayout.closeDrawers();
                 break;
             case "情景导入":
                 if (sceneImportFragmetn == null) {
                     sceneImportFragmetn = new SceneImportFragment();
                 }
-
+                commonSet(position+1);
                 showFragmentAtPosition1(sceneImportFragmetn);
+                drawerLayout.closeDrawers();
                 break;
             case "学习新知":
                 if (studyNewFragment == null) {
                     studyNewFragment = new StudyNewFragment();
 
                 }
+                commonSet(position+1);
                 showFragmentAtPosition1(studyNewFragment);
+                drawerLayout.closeDrawers();
                 break;
             case "深化应用":
                 if (deepenUseFragment == null) {
                     deepenUseFragment = new DeepenUseFragment();
 
                 }
+                commonSet(position+1);
                 showFragmentAtPosition1(deepenUseFragment);
+                drawerLayout.closeDrawers();
                 break;
             case "课堂小结":
                 if (classConclusionFragment == null) {
                     classConclusionFragment = new ClassConclusionFragment();
 
                 }
+                commonSet(position+1);
                 showFragmentAtPosition1(classConclusionFragment);
+                drawerLayout.closeDrawers();
                 break;
             case "巩固练习":
                 if (solidifyPracticeFragment == null) {
                     solidifyPracticeFragment = new SolidifyPracticeFragment();
 
                 }
+                commonSet(position+1);
                 showFragmentAtPosition1(solidifyPracticeFragment);
+                drawerLayout.closeDrawers();
                 break;
             case "出门考":
                 if (goOutTestFragment == null) {
                     goOutTestFragment = new GoOutTestFragment();
 
                 }
+                commonSet(position+1);
                 showFragmentAtPosition1(goOutTestFragment);
+                drawerLayout.closeDrawers();
                 break;
         }
 

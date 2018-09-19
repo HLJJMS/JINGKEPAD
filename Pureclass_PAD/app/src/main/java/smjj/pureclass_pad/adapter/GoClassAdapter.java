@@ -44,7 +44,7 @@ public class GoClassAdapter extends RecyclerView.Adapter<GoClassAdapter.viewHold
             @Override
             public void onClick(View view) {
 //            activity.getTypeCode(listBean.get(position).getTypeCode());
-                activity.getTypeName(listBean.get(position).getMenuName());
+                activity.getTypeName(listBean.get(position).getMenuName(),position);
             }
         });
     }
