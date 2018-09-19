@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/shape_pop_iq_bg"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_release_bt"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="15dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            android:text="一、选择题 （每题3分）"/>
+
+        <Button
+            android:id="@+id/iq_start_bt"
+            android:layout_width="80dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/shape_bg"
+            android:layout_marginRight="10dp"
+            android:text="开始答题"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+
+        <Button
+            android:id="@+id/iq_stop_bt"
+            android:layout_width="80dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/shape_bg"
+            android:layout_marginRight="10dp"
+            android:text="停止答题"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/iq_release_bt"
+            android:layout_width="80dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/shape_bg"
+            android:layout_marginRight="10dp"
+            android:text="答题详情"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_null"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            android:text="一、选择题 （每题3分）"/>
+
+    </LinearLayout>
+
+    <smjj.pureclass_pad.view.VerticalChart1
+        android:id="@+id/vc"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginRight="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginBottom="15dp"/>
+
+    <TextView
+        android:id="@+id/tv_select_correct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginBottom="10dp"
+        android:textSize="16sp"
+        android:text="请点击选项方块指定正确答案"/>
+
+</LinearLayout>

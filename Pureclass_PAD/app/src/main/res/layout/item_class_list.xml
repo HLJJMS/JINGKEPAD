@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/light_cyan">
+
+        <TextView
+            android:id="@+id/sd_no_tv"
+            style="@style/Scheduling_LV_TV_Style"
+            android:text="18326886192" />
+        <TextView
+            android:id="@+id/sd_schgegin_tv"
+            style="@style/Scheduling_LV_TV_Style"
+            android:layout_weight="1.2"
+            android:text="暑期英语四六级清华班" />
+        <TextView
+            android:id="@+id/sd_class_type_tv"
+            style="@style/Scheduling_LV_TV_Style"
+            android:text="小学二年级" />
+        <TextView
+            android:id="@+id/sd_subjects_tv"
+            style="@style/Scheduling_LV_TV_Style"
+            android:text="语文" />
+        <TextView
+            android:id="@+id/sd_grade_tv"
+            style="@style/Scheduling_LV_TV_Style"
+            android:text="一对一" />
+        <TextView
+            android:id="@+id/sd_class_date_tv"
+            style="@style/Scheduling_LV_TV_Style"
+            android:text="2017-05-06" />
+    </LinearLayout>
+
+
+</LinearLayout>

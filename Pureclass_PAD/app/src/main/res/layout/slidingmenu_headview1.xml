@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/ll_sign_group1"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            style="@style/menu_iamge"
+            android:src="@drawable/sign_in" />
+
+        <TextView
+            android:id="@+id/tv_sign_group1"
+            style="@style/menu_tv"
+            android:text="签到分组"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_induction_test1"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            style="@style/menu_iamge"
+            android:src="@drawable/rumence" />
+
+        <TextView
+            android:id="@+id/tv_induction_test1"
+            style="@style/menu_tv"
+            android:text="入门测"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_scene_import1"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            style="@style/menu_iamge"
+            android:src="@drawable/qingjingdaoru" />
+
+        <TextView
+            android:id="@+id/tv_scene_import1"
+            style="@style/menu_tv"
+            android:text="情景导入"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_study_new1"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            style="@style/menu_iamge"
+            android:src="@drawable/xuexixinzhi" />
+
+        <TextView
+            android:id="@+id/tv_study_new1"
+            style="@style/menu_tv"
+            android:text="学习新知"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_deepen_use1"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            style="@style/menu_iamge"
+            android:src="@drawable/shenhuayingyong" />
+
+        <TextView
+            android:id="@+id/tv_deepen_use1"
+            style="@style/menu_tv"
+            android:text="深化应用"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_solidify_practice1"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            style="@style/menu_iamge"
+            android:src="@drawable/gonggulianxi" />
+
+        <TextView
+            android:id="@+id/tv_solidify_practice1"
+            style="@style/menu_tv"
+            android:text="巩固练习"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_class_conclusion1"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            style="@style/menu_iamge"
+            android:src="@drawable/ketangxiaoji" />
+
+        <TextView
+            android:id="@+id/tv_class_conclusion1"
+            style="@style/menu_tv"
+            android:text="课堂小结"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_go_out_test1"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            style="@style/menu_iamge"
+            android:src="@drawable/chumenkao" />
+
+        <TextView
+            android:id="@+id/tv_go_out_test1"
+            style="@style/menu_tv"
+            android:text="出门考"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_ranking1"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            style="@style/menu_iamge"
+            android:src="@drawable/paiming" />
+
+        <TextView
+            android:id="@+id/tv_ranking1"
+            style="@style/menu_tv"
+            android:text="排名"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_class_record1"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            style="@style/menu_iamge"
+            android:src="@drawable/ketangjilu" />
+
+        <TextView
+            android:id="@+id/tv_class_record1"
+            style="@style/menu_tv"
+            android:text="课堂记录"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_happy1"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            style="@style/menu_iamge"
+            android:src="@drawable/kaixinyike" />
+
+        <TextView
+            android:id="@+id/tv_happy1"
+            style="@style/menu_tv"
+            android:text="开心一刻"/>
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/ll_responder1"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            style="@style/menu_iamge"
+            android:src="@drawable/qiangda" />
+
+        <TextView
+            android:id="@+id/tv_responder1"
+            style="@style/menu_tv"
+            android:text="抢答"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_red_packet1"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            style="@style/menu_iamge"
+            android:src="@drawable/red_packet" />
+
+        <TextView
+            android:id="@+id/tv_red_packet1"
+            style="@style/menu_tv"
+            android:text="发红包"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_back1"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            style="@style/menu_iamge"
+            android:src="@drawable/iv_back"/>
+
+        <TextView
+            android:id="@+id/tv_onBack1"
+            style="@style/menu_tv"
+            android:text="返回"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/themeColor"
+    tools:context="smjj.pureclass_pad.activity.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/log_logo"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+
+        <LinearLayout
+            android:id="@+id/ll_exit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/tv_exit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="退出"
+                android:textColor="@color/forget_password"
+                android:layout_gravity="center_vertical"
+                android:textSize="18sp"/>
+            <ImageView
+                android:id="@+id/iv_exit"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/esc"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/ll_prepare_class"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                style="@style/home_page_iv"
+                android:src="@drawable/prepare_lessons"/>
+
+            <TextView
+                style="@style/home_page_tv"
+                android:text="备课" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_go_class"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginLeft="50dp"
+            android:orientation="vertical">
+
+            <ImageView
+                style="@style/home_page_iv"
+                android:src="@drawable/go_class"/>
+
+            <TextView
+                style="@style/home_page_tv"
+                android:text="上课" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_after_class"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginLeft="50dp"
+            android:orientation="vertical">
+
+            <ImageView
+                style="@style/home_page_iv"
+                android:src="@drawable/after_class"/>
+
+            <TextView
+                style="@style/home_page_tv"
+                android:text="课后" />
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ll_appraisal"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginLeft="50dp"
+            android:orientation="vertical">
+
+            <ImageView
+                style="@style/home_page_iv"
+                android:src="@drawable/appraisal"/>
+
+            <TextView
+                style="@style/home_page_tv"
+                android:text="测评" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <include layout="@layout/bottom_copyright_bar"/>
+
+</RelativeLayout>

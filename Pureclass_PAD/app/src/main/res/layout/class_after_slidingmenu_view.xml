@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/rl_setting_work"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+        <ImageView
+            android:id="@+id/iv_setting_work"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/setting_work" />
+
+        <ImageView
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:src="@drawable/red_point"
+            android:layout_toRightOf="@id/iv_setting_work"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/tv_setting_work"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/iv_setting_work"
+            android:gravity="center"
+            android:text="布置作业"
+            android:textColor="@color/userColor"
+            android:textSize="@dimen/text_size" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_teaching_reflection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+
+        <ImageView
+            android:id="@+id/iv_teaching_reflection"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/teaching_reflection" />
+
+        <ImageView
+            android:id="@+id/iv_teaching_reflection1"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:src="@drawable/red_point"
+            android:layout_toRightOf="@id/iv_teaching_reflection" />
+
+        <TextView
+            android:id="@+id/tv_teaching_reflection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/iv_teaching_reflection"
+            android:gravity="center"
+            android:text="教学反思"
+            android:textSize="@dimen/text_size" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_feedback"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+
+        <ImageView
+            android:id="@+id/iv_feedback"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/feedback" />
+
+        <ImageView
+            android:id="@+id/iv_feedback1"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:src="@drawable/red_point"
+            android:layout_toRightOf="@id/iv_feedback" />
+
+        <TextView
+            android:id="@+id/tv_feedback"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/iv_feedback"
+            android:gravity="center"
+            android:text="课堂反馈"
+            android:textSize="@dimen/text_size" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_student_analysis"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+
+        <ImageView
+            android:id="@+id/iv_student_analysis"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/student_analysis" />
+
+        <ImageView
+            android:id="@+id/iv_student_analysis1"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:src="@drawable/red_point"
+            android:visibility="invisible"
+            android:layout_toRightOf="@id/iv_student_analysis" />
+
+        <TextView
+            android:id="@+id/tv_student_analysis"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/iv_student_analysis"
+            android:gravity="center"
+            android:text="学情分析"
+            android:textSize="@dimen/text_size" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+
+        <TextView
+            android:id="@+id/tv_onBack"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:text="返回"
+            android:textSize="@dimen/text_size" />
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_work_condition"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="smjj.pureclass_pad.activity.WorkConditionActivity">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include layout="@layout/head_toolbar"/>
+
+            <LinearLayout
+                android:id="@+id/ll_student_gridview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/answer_bg1">
+
+                <GridView
+                    android:id="@+id/gridview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:verticalSpacing="10dp"
+                    android:horizontalSpacing="20dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"
+                    android:columnWidth="80dp"
+                    android:numColumns="auto_fit"
+                    android:layout_marginTop="20dp"/>
+
+                <Button
+                    android:id="@+id/log_bt"
+                    android:layout_width="120dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/shape_bg"
+                    android:text="确认"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_ranking_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/light_orange">
+
+                    <TextView
+                        android:id="@+id/tv_ranking"
+                        style="@style/Scheduling_LV_TV_Style"
+                        android:text="名次" />
+                    <TextView
+                        android:id="@+id/tv_name"
+                        style="@style/Scheduling_LV_TV_Style"
+                        android:text="姓名" />
+                    <TextView
+                        android:id="@+id/tv_score"
+                        style="@style/Scheduling_LV_TV_Style"
+                        android:text="分数" />
+                    <TextView
+                        android:id="@+id/tv_percent"
+                        style="@style/Scheduling_LV_TV_Style"
+                        android:text="正确题数" />
+
+                </LinearLayout>
+
+                <smjj.pureclass_pad.xorzlistview.xlistview.XListView
+                    android:id="@+id/scheduling_lv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="20dp"
+                    android:divider="@null">
+                </smjj.pureclass_pad.xorzlistview.xlistview.XListView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_ranking_list1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp">
+
+
+                <smjj.pureclass_pad.xorzlistview.xlistview.XListView
+                    android:id="@+id/scheduling_lv1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="20dp"
+                    android:divider="@null">
+                </smjj.pureclass_pad.xorzlistview.xlistview.XListView>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    <ImageView
+        android:layout_width="500dp"
+        android:layout_height="150dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/background_logo"/>
+
+
+</RelativeLayout>

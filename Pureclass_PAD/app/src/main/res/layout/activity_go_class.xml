@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_go_class"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="smjj.pureclass_pad.activity.GoClassActivity">
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <include
+            android:id="@+id/ll_head_actionbar"
+            layout="@layout/class_head_toolbar"/>
+
+        <android.support.v4.widget.DrawerLayout
+            android:id="@+id/class_drawerlayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!--内容视图-->
+            <FrameLayout
+                android:id="@+id/class_framelayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </FrameLayout>
+            <LinearLayout
+                android:layout_gravity="start"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="#ffffff">
+                <LinearLayout
+                    android:id="@+id/ll_sign_groupstart"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:layout_gravity="end">
+
+                    <ImageView
+                        style="@style/menu_iamge"
+                        android:src="@drawable/sign_in" />
+
+                    <TextView
+                        android:id="@+id/tv_sign_groupstart"
+                        style="@style/menu_tv"
+                        android:text="签到分组"
+                        android:layout_gravity="end"/>
+
+                </LinearLayout>
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/startslid"
+                    android:layout_gravity="end"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    >
+
+                </android.support.v7.widget.RecyclerView>
+                <LinearLayout
+                    android:layout_gravity="start"
+                    android:id="@+id/ll_ranking_start"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_gravity="start"
+                        style="@style/menu_iamge"
+                        android:src="@drawable/paiming" />
+
+                    <TextView
+                        android:layout_gravity="end"
+                        android:id="@+id/tv_rankingstart"
+                        style="@style/menu_tv"
+                        android:text="排名"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_gravity="start"
+                    android:id="@+id/ll_class_recordstart"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_gravity="start"
+                        style="@style/menu_iamge"
+                        android:src="@drawable/ketangjilu" />
+
+                    <TextView
+                        android:layout_gravity="start"
+                        android:id="@+id/tv_class_recordstart"
+                        style="@style/menu_tv"
+                        android:text="课堂记录"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_gravity="start"
+                    android:id="@+id/ll_happystart"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_gravity="start"
+                        style="@style/menu_iamge"
+                        android:src="@drawable/kaixinyike" />
+
+                    <TextView
+                        android:layout_gravity="end"
+                        android:id="@+id/tv_happystart"
+                        style="@style/menu_tv"
+                        android:text="开心一刻"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_gravity="start"
+                    android:id="@+id/ll_responderstart"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_gravity="start"
+                        style="@style/menu_iamge"
+                        android:src="@drawable/qiangda" />
+
+                    <TextView
+                        android:layout_gravity="end"
+                        android:id="@+id/tv_responderstart"
+                        style="@style/menu_tv"
+                        android:text="抢答"/>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_gravity="start"
+                    android:id="@+id/ll_red_packetstart"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_gravity="end"
+                        style="@style/menu_iamge"
+                        android:src="@drawable/red_packet" />
+
+                    <TextView
+                        android:layout_gravity="end"
+                        android:id="@+id/tv_red_packetstart"
+                        style="@style/menu_tv"
+                        android:text="发红包"/>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_gravity="end"
+                    android:id="@+id/ll_backstart"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_gravity="end"
+                        style="@style/menu_iamge"
+                        android:src="@drawable/iv_back"/>
+
+                    <TextView
+                        android:layout_gravity="end"
+                        android:id="@+id/tv_onBackstart"
+                        style="@style/menu_tv"
+                        android:text="返回"/>
+
+                </LinearLayout>
+            </LinearLayout>
+            <!--导航视图（有两部分组成 头部视图和下半部分菜单）-->
+            <!--<android.support.design.widget.NavigationView-->
+                <!--android:id="@+id/class_navigationview"-->
+                <!--android:layout_width="200dp"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_gravity="left"-->
+                <!--app:headerLayout="@layout/slidingmenu_headview">-->
+
+            <!--</android.support.design.widget.NavigationView>-->
+
+            <!--导航视图（有两部分组成 头部视图和下半部分菜单）-->
+            <!--<android.support.design.widget.NavigationView-->
+                <!--android:id="@+id/class_navigationview1"-->
+                <!--android:layout_width="200dp"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_gravity="end"-->
+                <!--app:headerLayout="@layout/slidingmenu_headview1">-->
+
+            <!--</android.support.design.widget.NavigationView>-->
+            <LinearLayout
+                android:layout_gravity="end"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="#ffffff">
+                <LinearLayout
+                    android:id="@+id/ll_sign_group"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:layout_gravity="end">
+
+                    <ImageView
+                        style="@style/menu_iamge"
+                        android:src="@drawable/sign_in" />
+
+                    <TextView
+                        android:id="@+id/tv_sign_group"
+                        style="@style/menu_tv"
+                        android:text="签到分组"
+                        android:layout_gravity="end"/>
+
+                </LinearLayout>
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/endslid"
+                    android:layout_gravity="end"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    >
+
+                </android.support.v7.widget.RecyclerView>
+                <LinearLayout
+                    android:layout_gravity="end"
+                    android:id="@+id/ll_ranking"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_gravity="end"
+                        style="@style/menu_iamge"
+                        android:src="@drawable/paiming" />
+
+                    <TextView
+                        android:layout_gravity="end"
+                        android:id="@+id/tv_ranking"
+                        style="@style/menu_tv"
+                        android:text="排名"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_gravity="end"
+                    android:id="@+id/ll_class_record"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_gravity="end"
+                        style="@style/menu_iamge"
+                        android:src="@drawable/ketangjilu" />
+
+                    <TextView
+                        android:layout_gravity="end"
+                        android:id="@+id/tv_class_record"
+                        style="@style/menu_tv"
+                        android:text="课堂记录"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_gravity="end"
+                    android:id="@+id/ll_happy"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_gravity="end"
+                        style="@style/menu_iamge"
+                        android:src="@drawable/kaixinyike" />
+
+                    <TextView
+                        android:layout_gravity="end"
+                        android:id="@+id/tv_happy"
+                        style="@style/menu_tv"
+                        android:text="开心一刻"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_gravity="end"
+                    android:id="@+id/ll_responder"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_gravity="end"
+                        style="@style/menu_iamge"
+                        android:src="@drawable/qiangda" />
+
+                    <TextView
+                        android:layout_gravity="end"
+                        android:id="@+id/tv_responder"
+                        style="@style/menu_tv"
+                        android:text="抢答"/>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_gravity="end"
+                    android:id="@+id/ll_red_packet"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_gravity="end"
+                        style="@style/menu_iamge"
+                        android:src="@drawable/red_packet" />
+
+                    <TextView
+                        android:layout_gravity="end"
+                        android:id="@+id/tv_red_packet"
+                        style="@style/menu_tv"
+                        android:text="发红包"/>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_gravity="end"
+                    android:id="@+id/ll_back"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_gravity="end"
+                        style="@style/menu_iamge"
+                        android:src="@drawable/iv_back"/>
+
+                    <TextView
+                        android:layout_gravity="end"
+                        android:id="@+id/tv_onBack"
+                        style="@style/menu_tv"
+                        android:text="返回"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </android.support.v4.widget.DrawerLayout>
+
+    </LinearLayout>
+
+    <!--<include-->
+        <!--android:id="@+id/content_bezier"-->
+        item_lessonyouitem_lessonyout/content_bezier" />-->
+
+    <include
+        layout="@layout/content_bezier_surface" />
+
+    <!--<smjj.pureclass_pad.view.redpacketview.RedPacketsSurfaceVew-->
+        <!--android:id="@+id/bezier_surface"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_marginTop="40dp"/>-->
+
+
+
+
+</RelativeLayout>

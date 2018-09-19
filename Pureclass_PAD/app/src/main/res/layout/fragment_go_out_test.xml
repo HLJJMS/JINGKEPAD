@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <include
+        android:id="@+id/rl_bottom_actionbar"
+        layout="@layout/class_bottom_bar"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/rl_bottom_actionbar"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/ll_release_bt"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="25dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                android:text="一、选择题 （每题3分）"/>
+
+
+            <Button
+                android:id="@+id/start_bt"
+                android:layout_width="80dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/shape_bg"
+                android:layout_marginRight="10dp"
+                android:text="开始答题"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+
+            <Button
+                android:id="@+id/stop_bt"
+                android:layout_width="80dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/shape_bg"
+                android:layout_marginRight="10dp"
+                android:text="停止答题"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/release_bt"
+                android:layout_width="70dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/shape_bg"
+                android:layout_marginRight="10dp"
+                android:text="发  布"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <smjj.pureclass_pad.xorzlistview.xlistview.XListView
+            android:id="@+id/scheduling_lv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:divider="@color/white"
+            android:dividerHeight="10dp">
+        </smjj.pureclass_pad.xorzlistview.xlistview.XListView>
+
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="500dp"
+        android:layout_height="150dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/background_logo"/>
+
+    <ImageView
+        android:id="@+id/iv_test_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/test_icon"
+        android:layout_above="@id/rl_bottom_actionbar"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"/>
+
+
+</RelativeLayout>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/shape_pop_bg1"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_pop_title"
+        android:layout_width="match_parent"
+        android:background="@drawable/shape_pop_bg"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_student_list"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="45dp"
+            android:text="请选择要使用的备课包"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size1"
+            android:gravity="center"/>
+
+        <ImageView
+            android:id="@+id/iv_close_pop"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/close_pop"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="15dp"
+        android:visibility="gone"
+        android:layout_marginRight="15dp"
+        android:layout_below="@id/ll_pop_title"
+        android:background="@color/light_black3"/>
+
+
+    <ListView
+        android:id="@+id/pop_lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="30dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:dividerHeight="1dp"
+        android:divider="@null"/>
+
+
+</LinearLayout>

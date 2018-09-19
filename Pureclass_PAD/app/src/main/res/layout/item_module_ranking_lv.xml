@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/light_cyan">
+
+        <TextView
+            android:id="@+id/ranking_tv"
+            style="@style/Scheduling_LV_TV_Style"
+            android:visibility="gone"
+            android:text="18326886192" />
+        <ImageView
+            android:id="@+id/ranking_iv"
+            style="@style/Scheduling_LV_TV_Style"
+            android:visibility="visible"/>
+        <TextView
+            android:id="@+id/name_tv"
+            style="@style/Scheduling_LV_TV_Style"
+            android:text="" />
+        <TextView
+            android:id="@+id/score_tv"
+            style="@style/Scheduling_LV_TV_Style"
+            android:text="" />
+        <TextView
+            android:id="@+id/percent_tv"
+            style="@style/Scheduling_LV_TV_Style"
+            android:text="" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

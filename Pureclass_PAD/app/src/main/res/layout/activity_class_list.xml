@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_prepare_class"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="smjj.pureclass_pad.activity.PrepareClassActivity">
+
+    <include
+        android:id="@+id/rl_bottom_actionbar"
+        layout="@layout/bottom_copyright_bar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/rl_bottom_actionbar"
+        android:orientation="vertical">
+
+        <include layout="@layout/head_toolbar"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp"
+            android:background="@color/light_orange">
+
+            <TextView
+                style="@style/Scheduling_LV_TV_Style"
+                android:text="班课编号" />
+            <TextView
+                style="@style/Scheduling_LV_TV_Style"
+                android:layout_weight="1.2"
+                android:text="班课名称" />
+            <TextView
+                style="@style/Scheduling_LV_TV_Style"
+                android:text="年级" />
+            <TextView
+                style="@style/Scheduling_LV_TV_Style"
+                android:text="科目" />
+
+            <TextView
+                style="@style/Scheduling_LV_TV_Style"
+                android:text="班级类型"
+                android:id="@+id/textView" />
+
+            <TextView
+                style="@style/Scheduling_LV_TV_Style"
+                android:text="开班时间" />
+
+        </LinearLayout>
+
+        <smjj.pureclass_pad.xorzlistview.xlistview.XListView
+            android:id="@+id/scheduling_lv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@null">
+        </smjj.pureclass_pad.xorzlistview.xlistview.XListView>
+
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="500dp"
+        android:layout_height="150dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/background_logo"/>
+
+</RelativeLayout>

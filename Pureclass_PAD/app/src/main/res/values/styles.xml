@@ -1,0 +1,175 @@
+<resources>
+
+    <style name="AppTheme" parent="@style/BaseTheme">
+
+    </style>
+
+    <!-- Base application theme.Theme.AppCompat.Light.NoActionBar -->
+    <style name="BaseTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/themeColor</item>
+        <item name="colorPrimaryDark">@color/themeColor_top</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowActionModeOverlay">true</item>
+    </style>
+
+    <style name="AppTheme.DrawerArrowToggle" parent="Base.Widget.AppCompat.DrawerArrowToggle">
+        <item name="color">@android:color/white</item>
+    </style>
+
+    <style name="bottom_copyright_style">
+        <item name="android:layout_marginTop">50dp</item>
+        <item name="android:layout_marginBottom">30dp</item>
+        <item name="android:layout_alignParentBottom">true</item>
+    </style>
+
+    <!--<style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">-->
+        <!--&lt;!&ndash; toolbar（actionbar）颜色 &ndash;&gt;-->
+        <!--<item name="colorPrimary">@color/themeColor</item>-->
+        <!--&lt;!&ndash; 状态栏颜色 &ndash;&gt;-->
+        <!--<item name="colorPrimaryDark">@color/themeoColor</item>-->
+        <!--<item name="android:actionMenuTextColor">@color/white</item>-->
+        <!--&lt;!&ndash;        <item name="android:textColorPrimary">@color/white</item>&ndash;&gt;-->
+        <!--<item name="android:textColor">@color/black</item>-->
+        <!--<item name="windowActionModeOverlay">true</item>-->
+        <!--<item name="android:actionMenuTextAppearance">@style/MenuTextStyle</item>-->
+        <!--&lt;!&ndash;<item name="android:actionModeCloseDrawable">@android:drawable/ic_notification_clear_all</item>&ndash;&gt;-->
+        <!--<item name="android:actionModeBackground">@color/themeColor</item>-->
+        <!--&lt;!&ndash; ActionMode右边的按钮是一个特殊的CloseButton，分割线与CloseButton的Style有关 &ndash;&gt;-->
+        <!--&lt;!&ndash; 删除ActionMode的Divider&ndash;&gt;-->
+        <!--<item name="android:actionModeCloseButtonStyle">@null</item>-->
+        <!--&lt;!&ndash;   &lt;!&ndash; 窗口的背景颜色 &ndash;&gt;-->
+           <!--<item name="android:windowBackground">@android:color/white</item>&ndash;&gt;-->
+    <!--</style>-->
+
+
+    <style name="MenuTextStyle">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="home_page_iv">
+        <item name="android:layout_width">100dp</item>
+        <item name="android:layout_height">100dp</item>
+    </style>
+    <style name="feedback_star_iv">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">20dp</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_marginLeft">5dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+
+
+    <style name="home_page_tv">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">10dp</item>
+    </style>
+
+    <!-- LoadingDialog 的style样式 -->
+    <style name="CommonLibDialogStyle">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <style name="Scheduling_LV_TV_Style">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">@dimen/text_size</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/light_black</item>
+
+    </style>
+
+    <style name="Create_Button_Style">
+        <item name="android:layout_width">85dp</item>
+        <item name="android:layout_height">25dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:button">@null</item>
+        <item name="android:layout_marginLeft">20dp</item>
+        <item name="android:background">@drawable/button_create_bg</item>
+
+
+    </style>
+
+    <style name="pop_up_down">
+        <item name="android:windowEnterAnimation">@anim/settingswindow_in_anim</item>
+        <item name="android:windowExitAnimation">@anim/settingswindow_out_anim</item>
+
+    </style>
+
+    <style name="popWindow_animation">
+        <item name="android:windowEnterAnimation">@anim/popupwindow_enter</item>
+        <item name="android:windowExitAnimation">@anim/popupwindow_exit</item>
+    </style>
+
+    <style name="FullScreenTheme" parent="AppTheme">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="menu_iamge">
+        <item name="android:layout_width">20dp</item>
+        <item name="android:layout_height">20dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_marginLeft">20dp</item>
+    </style>
+
+    <style name="menu_tv">
+        <item name="android:layout_width">80dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_marginLeft">20dp</item>
+        <item name="android:textSize">@dimen/text_size</item>
+
+    </style>
+
+    <style name="Gridview_Style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:verticalSpacing">20dp</item>
+        <item name="android:horizontalSpacing">10dp</item>
+        <item name="android:numColumns">auto_fit</item>
+        <item name="android:layout_marginLeft">25dp</item>
+        <item name="android:layout_marginRight">25dp</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:columnWidth">100dp</item>
+
+    </style>
+
+    <style name="EditText_group_style">
+
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:background">@drawable/shape_et_bg</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingLeft">25dp</item>
+        <item name="android:paddingRight">25dp</item>
+        <item name="android:textColor">@color/light_black</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:textSize">@dimen/text_size</item>
+        <item name="android:maxLength">8</item>
+
+    </style>
+
+
+
+
+</resources>

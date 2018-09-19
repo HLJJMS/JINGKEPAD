@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_collect_analy"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="smjj.pureclass_pad.activity.CollectAnalyActivity">
+
+
+    <include
+        android:id="@+id/ll_head_actionbar"
+        layout="@layout/head_toolbar"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ll_head_actionbar">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="100dp"
+                    android:layout_marginRight="50dp"
+                    android:layout_marginTop="95dp"
+                    android:background="@drawable/answer_bg"
+                    android:layout_centerInParent="true">
+
+                    <EditText
+                        android:id="@+id/et_class_conclusion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="60dp"
+                        android:layout_marginLeft="60dp"
+                        android:layout_marginTop="60dp"
+                        android:layout_marginBottom="40dp"
+                        android:background="@null"
+                        android:hint="请输入汇总分析" />
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/log_bt"
+                    android:layout_width="120dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/shape_bg"
+                    android:text="确认保存"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size1" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/iv_happy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/collect_analy"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="30dp"/>
+
+        </FrameLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

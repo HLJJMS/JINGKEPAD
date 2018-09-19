@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_prepare_class1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="smjj.pureclass_pad.activity.PrepareClassActivity1">
+
+    <include
+        android:id="@+id/rl_bottom_actionbar"
+        layout="@layout/bottom_copyright_bar"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/rl_bottom_actionbar"
+        android:orientation="vertical">
+
+        <!--<inclitem_lessonyouitem_lessonyout/head_toolbar"/>-->
+        <include layout="@layout/class_head_toolbar"/>
+
+
+        <smjj.pureclass_pad.view.HorizontalListView
+            android:id="@+id/h_course_lv"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp">
+
+        </smjj.pureclass_pad.view.HorizontalListView>
+
+
+        <GridView
+            android:id="@+id/scheduling_lv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:verticalSpacing="15dp"
+            android:horizontalSpacing="10dp"
+            android:numColumns="3"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:divider="@null">
+        </GridView>
+
+        <TextView
+            android:id="@+id/empty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:text="外部教师请先添加班级，学生，再添加排课"/>
+
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="500dp"
+        android:layout_height="150dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/background_logo"/>
+
+
+
+</RelativeLayout>

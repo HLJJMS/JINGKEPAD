@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="95dp"
+    android:layout_height="25dp">
+    <RadioButton
+        android:id="@+id/radio_for_recycler"
+        android:layout_width="80dp"
+        android:layout_height="25dp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:background="@drawable/bg_button_slidingment"
+        android:button="@null"
+        android:textColor="@color/white"
+        android:text="asdasdasda"/>
+</LinearLayout>

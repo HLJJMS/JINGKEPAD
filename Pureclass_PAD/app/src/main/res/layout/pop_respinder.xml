@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/shape_pop_responder"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/ll_release_bt"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            android:text="一、选择题 （每题3分）"/>
+
+        <Button
+            android:id="@+id/responder_start_bt"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:background="@drawable/responder_select"
+            android:text="开始抢答"
+            android:textColor="@color/black"
+            android:paddingTop="50dp"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            android:text="一、选择题 （每题3分）"/>
+
+        <Button
+            android:id="@+id/responder_stop_bt"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:background="@drawable/responder_select_no"
+            android:text="停止答题"
+            android:paddingTop="50dp"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            android:text="一、选择题 （每题3分）"/>
+
+        <Button
+            android:id="@+id/responder_release_bt"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:background="@drawable/responder_select_no"
+            android:text="抢答详情"
+            android:textColor="@color/black"
+            android:paddingTop="50dp"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_null"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            android:text="一、选择题 （每题3分）"/>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_vertical"
+    android:gravity="center_vertical"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:background="@drawable/rp_lv_bg"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical">
+
+
+        <TextView
+            android:id="@+id/name_tv"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:text="王李明"
+            android:textSize="20sp"
+            android:textColor="@color/light_black"
+            android:layout_gravity="center"
+            android:gravity="center"/>
+
+        <ImageView
+            android:id="@+id/ranking_iv"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/rp_first"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_marginLeft="10dp">
+
+
+
+            <TextView
+                android:id="@+id/tv_medal_total"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="15金币"
+                android:textSize="18sp"
+                android:textColor="@color/light_black"
+                android:layout_gravity="center"
+                android:gravity="center_vertical"/>
+
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tv_branch_name"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:text="01"
+            android:textSize="30sp"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:textColor="@color/themeColor_top1"
+            android:gravity="center"/>
+
+    </LinearLayout>
+</LinearLayout>

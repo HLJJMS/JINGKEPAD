@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="100dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginTop="100dp"
+                android:background="@drawable/answer_bg"
+                android:layout_centerInParent="true">
+
+                <TextView
+                    android:id="@+id/tv_happy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="60dp"
+                    android:layout_marginLeft="60dp"
+                    android:layout_marginTop="60dp"
+                    android:text="上学时和一个同学翻墙出去网吧，被门卫大爷抓住了，要记下名字通知班主任，我胆颤的写了聂风，那货居然写了步惊云。。。
+我绝望的看了看大爷，他愣了愣，说，聂风回去，步惊云留下！
+我活了大半辈子，没见过姓步的，想骗我！？"/>
+
+                <TextView
+                    android:id="@+id/tv_happy_problem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginRight="60dp"
+                    android:layout_marginLeft="60dp"
+                    android:layout_marginBottom="40dp"
+                    android:text="问：侦查员是怎么过河的？"
+                    android:textColor="@color/themeColor_top"/>
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/iv_happy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/happy"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="30dp"/>
+
+
+
+        </FrameLayout>
+
+
+
+    </ScrollView>
+
+
+</RelativeLayout>

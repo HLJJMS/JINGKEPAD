@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/light_cyan">
+
+        <TextView
+            android:id="@+id/sd_no_tv"
+            style="@style/Scheduling_LV_TV_Style"
+            android:text="18326886192" />
+        <TextView
+            android:id="@+id/sd_schgegin_tv"
+            style="@style/Scheduling_LV_TV_Style"
+            android:text="王李明" />
+        <TextView
+            android:id="@+id/sd_class_type_tv"
+            style="@style/Scheduling_LV_TV_Style"
+            android:text="一对一" />
+        <TextView
+            android:id="@+id/sd_subjects_tv"
+            style="@style/Scheduling_LV_TV_Style"
+            android:text="小学二年级" />
+        <TextView
+            android:id="@+id/sd_grade_tv"
+            style="@style/Scheduling_LV_TV_Style"
+            android:text="2009-03" />
+        <TextView
+            android:id="@+id/sd_class_date_tv"
+            style="@style/Scheduling_LV_TV_Style"
+            android:text="华英中学" />
+        <TextView
+            android:id="@+id/sd_start_date_tv"
+            style="@style/Scheduling_LV_TV_Style"
+            android:text="北京通州" />
+        <TextView
+            android:id="@+id/sd_student_list"
+            style="@style/Scheduling_LV_TV_Style"
+            android:text="点击获取"
+            android:textColor="@color/themeColor_top"/>
+    </LinearLayout>
+
+
+</LinearLayout>

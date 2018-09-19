@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="sendpress">#236BC5</color>
+    <color name="red">#FF0000</color>
+    <!-- 主题背景颜色 -->
+    <color name="themeColor">#004559</color>
+    <!-- 主题背景颜色 -->
+    <color name="themeColor1">#22535e</color>
+    <!-- 状态栏背景颜色 -->
+    <color name="themeColor_top">#00852f</color>
+    <!-- 状态栏背景颜色 -->
+    <color name="themeColor_top1">#fc6b00</color>
+    <!-- 底部状态栏背景颜色 -->
+    <color name="themeColor_bottom">#00a73c</color>
+    <!--<color name="themeColor">#005a74</color>-->
+    <!-- 透明背景 -->
+    <color name="white">#ffffff</color>
+    <!-- 黑色 -->
+    <color name="black">#000000</color>
+    <!--用户名密码颜色-->
+    <color name="userColor">#f6aa00</color>
+    <!--用户名密码颜色-->
+    <color name="userColor1">#f0ab00</color>
+    <!--用户名密码输入框下划线颜色-->
+    <color name="user_underline">#086050</color>
+    <!-- 白色 -->
+    <color name="white1">#aaaaaa</color>
+    <!--忘记密码字体颜色-->
+    <color name="forget_password">#199f3c</color>
+    <!--工具栏颜色-->
+    <color name="action_bar">#005a74</color>
+    <!--轻黑-->
+    <color name="light_black">#333333</color>
+    <!--轻黑1-->
+    <color name="light_black1">#666666</color>
+
+    <!--轻黑1-->
+    <color name="light_black2">#aaaaaa</color>
+    <color name="light_black3">#dddddd</color>
+    <!--浅青-->
+    <color name="light_cyan">#d1ecd8</color>
+    <!--青色-->
+    <color name="cyan">#bae2c4</color>
+    <!--浅橙色-->
+    <color name="light_orange">#fbdd99</color>
+    <!--浅橙色1 创建班级输入框未填写背景-->
+    <color name="light_orange1">#fce5b2</color>
+    <!--浅绿色-->
+    <color name="light_green">#199f3c</color>
+    <!--浅灰色-->
+    <color name="light_gry">#e6f4e9</color>
+    <!--半透明-->
+    <color name="half_lucency">#666666</color>
+    <!--浅红色 创建学生必填必选字体颜色-->
+    <color name="light_red">#ff735c</color>
+    <!--深红色 创建学生必填必选字体颜色-->
+    <color name="deep_red">#af0805</color>
+
+    <color name="gray">#e5efe9</color>
+
+
+</resources>

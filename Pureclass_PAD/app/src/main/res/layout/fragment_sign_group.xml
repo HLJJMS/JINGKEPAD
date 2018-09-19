@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_sign"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:paddingLeft="25dp">
+
+                    <TextView
+                        android:id="@+id/tv_sign"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="签到"
+                        android:layout_gravity="bottom"
+                        android:layout_marginBottom="3dp"
+                        android:textColor="@color/light_black"
+                        android:textSize="@dimen/text_size1" />
+
+                    <CheckBox
+                        android:id="@+id/checkbox_all"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="全选"
+                        android:layout_marginRight="25dp"
+                        android:gravity="right"
+                        android:layout_gravity="bottom"
+                        android:layout_marginBottom="3dp"
+                        android:textColor="@color/light_black1"
+                        android:drawableLeft="@drawable/check_box_custom"
+                        android:drawablePadding="5dp"
+                        android:button="@null"
+                        android:textSize="@dimen/text_size"/>
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/fengexian"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginLeft="25dp"/>
+
+                <LinearLayout
+                    android:id="@+id/ll_check_sign_total"
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="80dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:paddingLeft="25dp">
+
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/yingdao">
+
+                        <TextView
+                            android:id="@+id/tv_check_sign_total"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:layout_gravity="bottom"
+                            android:layout_marginBottom="3dp"
+                            android:textColor="@color/black"
+                            android:layout_centerInParent="true"
+                            android:textSize="22dp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="120dp"
+                        android:background="@drawable/shidao">
+
+                        <TextView
+                            android:id="@+id/tv_check_sign_total1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:layout_gravity="bottom"
+                            android:layout_marginBottom="3dp"
+                            android:textColor="@color/black"
+                            android:layout_centerInParent="true"
+                            android:textSize="22dp" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+
+
+                <smjj.pureclass_pad.view.AutoHeightGridView
+                    android:id="@+id/gridview"
+                    style="@style/Gridview_Style" />
+
+                <Button
+                    android:id="@+id/log_bt"
+                    android:layout_width="120dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/sure_button"
+                    android:text="确认签到"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size1" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="20dp"
+                    android:paddingRight="25dp"
+                    android:paddingLeft="25dp">
+
+                    <TextView
+                        android:id="@+id/tv_group"
+                        android:layout_width="120dp"
+                        android:layout_height="35dp"
+                        android:text="选择分组"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_marginBottom="3dp"
+                        android:background="@drawable/shape_bg"
+                        android:textColor="@color/white"
+                        android:drawableRight="@drawable/arrow_right"
+                        android:paddingRight="5dp"
+                        android:textSize="@dimen/text_size1" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"/>
+
+                    <TextView
+                        android:id="@+id/tv_group_sure"
+                        android:layout_width="120dp"
+                        android:layout_height="35dp"
+                        android:text="确认组名"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_marginBottom="3dp"
+                        android:background="@drawable/shape_bg"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size1" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/ll_group1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="5dp"
+                    android:visibility="invisible"
+                    android:paddingLeft="25dp">
+
+                    <EditText
+                        android:id="@+id/et_group1"
+                        style="@style/EditText_group_style"
+                        android:text="第一组" />
+
+                    <smjj.pureclass_pad.view.AutoHeightGridView
+                        android:id="@+id/gridview_group1"
+                        style="@style/Gridview_Style" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_group2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="invisible"
+                    android:layout_marginTop="5dp"
+                    android:paddingLeft="25dp">
+
+                    <EditText
+                        android:id="@+id/et_group2"
+                        style="@style/EditText_group_style"
+                        android:text="第二组" />
+
+                    <smjj.pureclass_pad.view.AutoHeightGridView
+                        android:id="@+id/gridview_group2"
+                        style="@style/Gridview_Style" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/ll_group3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="5dp"
+                    android:visibility="invisible"
+                    android:paddingLeft="25dp">
+
+                    <EditText
+                        android:id="@+id/et_group3"
+                        style="@style/EditText_group_style"
+                        android:text="第三组" />
+
+                    <smjj.pureclass_pad.view.AutoHeightGridView
+                        android:id="@+id/gridview_group3"
+                        style="@style/Gridview_Style" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/ll_group4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="invisible"
+                    android:layout_marginTop="5dp"
+                    android:paddingLeft="25dp">
+
+                    <EditText
+                        android:id="@+id/et_group4"
+                        style="@style/EditText_group_style"
+                        android:text="第四组" />
+
+                    <smjj.pureclass_pad.view.AutoHeightGridView
+                        android:id="@+id/gridview_group4"
+                        style="@style/Gridview_Style" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/ll_group5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="invisible"
+                    android:layout_marginTop="5dp"
+                    android:paddingLeft="25dp">
+
+                    <EditText
+                        android:id="@+id/et_group5"
+                        style="@style/EditText_group_style"
+                        android:text="第五组" />
+
+                    <smjj.pureclass_pad.view.AutoHeightGridView
+                        android:id="@+id/gridview_group5"
+                        style="@style/Gridview_Style" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/ll_group6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="invisible"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="20dp"
+                    android:paddingLeft="25dp">
+
+                    <EditText
+                        android:id="@+id/et_group6"
+                        style="@style/EditText_group_style"
+                        android:text="第六组" />
+
+                    <smjj.pureclass_pad.view.AutoHeightGridView
+                        android:id="@+id/gridview_group6"
+                        style="@style/Gridview_Style" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+
+
+
+    </ScrollView>
+
+
+</LinearLayout>

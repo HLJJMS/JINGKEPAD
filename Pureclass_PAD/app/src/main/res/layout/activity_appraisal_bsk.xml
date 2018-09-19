@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_appraisal_bsk"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="smjj.pureclass_pad.activity.AppraisalBskActivity">
+
+    <include
+        android:id="@+id/ll_head_actionbar"
+        layout="@layout/head_toolbar" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@id/ll_head_actionbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal"
+            android:paddingLeft="25dp"
+            android:paddingRight="25dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="标        题"
+                android:textColor="@color/light_black"
+                android:textSize="@dimen/text_size" />
+
+            <EditText
+                android:id="@+id/et_test_title"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/shape_gray_bg1"
+                android:gravity="center_vertical"
+                android:hint="请输入10到60字的试卷名称，例如: 2015年中考压轴题精选"
+                android:maxLength="60"
+                android:paddingLeft="15dp"
+                android:imeOptions="flagNoExtractUi"
+                android:textColor="@color/light_black1"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal"
+            android:paddingLeft="25dp"
+            android:paddingRight="25dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="描        述"
+                android:textColor="@color/light_black"
+                android:textSize="@dimen/text_size" />
+
+            <EditText
+                android:id="@+id/et_test_describe"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/shape_gray_bg1"
+                android:gravity="center_vertical"
+                android:hint="对试卷进行描述，主要用来方便查看你的试卷"
+                android:maxLength="60"
+                android:paddingLeft="15dp"
+                android:textColor="@color/light_black1"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal"
+            android:paddingLeft="25dp"
+            android:paddingRight="25dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="全卷总分"
+                android:textColor="@color/light_black"
+                android:textSize="@dimen/text_size" />
+
+            <EditText
+                android:id="@+id/et_total_score"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/shape_gray_bg1"
+                android:gravity="center_vertical"
+                android:maxLength="3"
+                android:paddingLeft="15dp"
+                android:text="0"
+                android:textColor="@color/red"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:visibility="gone"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="一、选择题（共 "
+                android:visibility="invisible" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:text="温馨提示：最多可放置30条数据。"
+                android:textColor="@color/themeColor_top"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="一、选择题（共 "
+                android:visibility="invisible" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_bottom_bsk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="25dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="5dp">
+
+            <Button
+                android:id="@+id/bt_create_work"
+                android:layout_width="80dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/shape_bg1"
+                android:text="生成组卷"
+                android:gravity="center"
+                android:textColor="@color/light_black1"
+                android:textSize="13sp" />
+
+            <Button
+                android:id="@+id/bt_select_work"
+                android:layout_width="80dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/shape_bg1"
+                android:text="继续选题"
+                android:textColor="@color/light_black1"
+                android:textSize="13sp" />
+
+            <Button
+                android:id="@+id/bt_back_scheduling"
+                android:layout_width="80dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/shape_bg1"
+                android:text="发布试卷"
+                android:textColor="@color/light_black1"
+                android:textSize="13sp" />
+
+            <Button
+                android:id="@+id/bt_clear_work"
+                android:layout_width="80dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/shape_bg1"
+                android:text="清空试题"
+                android:textColor="@color/light_black1"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <smjj.pureclass_pad.xorzlistview.xlistview.XListView
+            android:id="@+id/scheduling_lv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:dividerHeight="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:divider="@color/white">
+
+        </smjj.pureclass_pad.xorzlistview.xlistview.XListView>
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="500dp"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/background_logo" />
+</RelativeLayout>

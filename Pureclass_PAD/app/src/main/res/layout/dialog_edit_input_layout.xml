@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+    <TextView
+            android:id="@+id/tv_title"
+            android:layout_marginLeft="20dp"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/sendpress"
+            android:text=""/>
+
+
+    <TextView
+            android:id="@+id/tv_msg"
+            android:layout_marginLeft="20dp"
+            android:textSize="13sp"
+            android:layout_width="fill_parent"
+            android:layout_height="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/red"
+            android:text=""/>
+
+
+    <EditText
+            android:id="@+id/et_inputContent"
+            android:layout_marginLeft="20dp"
+            android:textSize="15sp"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/bg_textview"
+            android:hint="请输入需修改的内容"
+            android:inputType="numberDecimal"
+            android:padding="12dp"/>
+
+</LinearLayout>
