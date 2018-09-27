@@ -37,14 +37,14 @@ public class PptOrQuestionActivity extends AppCompatActivity {
     File file;
 
     private static final int FILE_SELECT_CODE = 0;
-    private String grade, subject, parentID, knowledgeID, selectDataGram, speakId, speakName, materialName, materialNo, classNo, startTime, className, packageNo,url;
+    private String grade, subject, parentID, knowledgeID, selectDataGram, speakId, speakName, materialName, materialNo, classNo, startTime, className, packageNo, url;
     private Context context;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ppt_or_question);
         context = this;
-
         findView();
         click();
     }
@@ -99,96 +99,167 @@ public class PptOrQuestionActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-    ok.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View view) {
-
-
-            if (CommonWay.netWorkCheck(context)) { // 在有网络的情况下登入
-                JSONObject jsonObject = new JSONObject();
-                File file = new File(url);
-                String is=getBytesFromFile(file);
-                jsonObject.put("abc","a");
-                jsonObject.put("file", is);
-                final String jsonCode = jsonObject.toJSONString();
-//                String MD5Result = MD5.stringMd5(jsonCode + Constants.key);
-                String methodName = "B002015";
-                HashMap<String, String> map = new HashMap<>();
-                map.put("jsoncode", jsonCode);
-//                map.put("token", MD5Result);
-
-                //通过工具类调用WebService接口
-                WebServiceUtils.callWebService(Constants.WEB_SERVER_URL, methodName, map, new WebServiceUtils.WebServiceCallBack() {
-                    //WebService接口返回的数据回调到这个方法中
-                    @Override
-                    public void callBackSuccess(SoapObject result) {
-
-                        //关闭进度条
-                        if (result != null) {
-
-                            org.json.JSONObject jsonObject = CommonWay.parseSoapObjectUnicode(result);
-                            if (jsonObject != null) {
-                                try {
-                                    String resultvalue = "";
-                                    if (jsonObject.toString().contains("resultvalue")) {
-                                        resultvalue = jsonObject.getString("resultvalue");
-                                    }
-                                    if (resultvalue.equals("1") || resultvalue.equals("-1")) {
-                                        String errinfo = jsonObject.getString("errinfo");
-                                        //校验失败 是指token校验失败
-                                        Log.d("FAILURE_RESULT", errinfo);
-                                        AlertDialogUtil.showAlertDialog(context, "提示", "添加失败");
-                                    } else if (resultvalue.equals("0")){
-                                        Toast.makeText(PptOrQuestionActivity.this, "添加成功", Toast.LENGTH_SHORT).show();
-//                                    Intent intent = new Intent(context,ClassListActivity.class);
-//                                    startActivity(intent);
-                                        finish();
-                                    }
-                                } catch (JSONException e) {
-                                    e.printStackTrace();
-                                    AlertDialogUtil.showAlertDialog(context, "提示", "网络连接失败，请重试");
-                                }
-                            } else {
-                                AlertDialogUtil.showAlertDialog(context, "提示", "服务器返回数据有误");
-                            }
-                        } else {
-                            AlertDialogUtil.showAlertDialog(context, "提示", "网络连接失败，请重试");
-                        }
-                    }
-                });
-            } else {
-                AlertDialogUtil.showAlertDialog(context, "温馨提示", "哎呀,无网络连接,请检查您的网络设置！");
+        ok.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+//        updataOld();
+                updataNew();
             }
+        });
+    }
+
+    private void updataNew() {
+
+        try{
+            FileInputStream fis = new FileInputStream(url);
+            ByteArrayOutputStream baos = new ByteArrayOutputStream();
+            byte[] buffer = new byte[1024];
+            int count = 0;
+            while((count = fis.read(buffer)) >= 0){
+                baos.write(buffer, 0, count);
+            }
+            String uploadBuffer = new String(Base64.encode(buffer,count));  //进行Base64编码
+            connectWebService(uploadBuffer);
+            Log.e("connectWebService", "start");
+            fis.close();
+        }catch(Exception e){
+            e.printStackTrace();
         }
 
-
-    });
     }
-    public static String getBytesFromFile(File file){
-       String result=null;
-        byte[] ret=null;
-        try{
-            if (file==null){
+
+    private void connectWebService(String uploadBuffer) {
+
+        if (CommonWay.netWorkCheck(context)) { // 在有网络的情况下登入
+            JSONObject jsonObject = new JSONObject();
+            String is = getBytesFromFile(file);
+            jsonObject.put("abc", "a");
+            jsonObject.put("file", uploadBuffer);
+            final String jsonCode = jsonObject.toJSONString();
+//                String MD5Result = MD5.stringMd5(jsonCode + Constants.key);
+            String methodName = "B002015";
+            HashMap<String, String> map = new HashMap<>();
+            map.put("jsoncode", jsonCode);
+//                map.put("token", MD5Result);
+
+            //通过工具类调用WebService接口
+            WebServiceUtils.callWebService(Constants.WEB_SERVER_URL, methodName, map, new WebServiceUtils.WebServiceCallBack() {
+                //WebService接口返回的数据回调到这个方法中
+                @Override
+                public void callBackSuccess(SoapObject result) {
+
+                    //关闭进度条
+                    if (result != null) {
+
+                        org.json.JSONObject jsonObject = CommonWay.parseSoapObjectUnicode(result);
+                        if (jsonObject != null) {
+                            try {
+                                String resultvalue = "";
+                                if (jsonObject.toString().contains("resultvalue")) {
+                                    resultvalue = jsonObject.getString("resultvalue");
+                                  ok.setText(jsonObject.toString());
+                                }
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                                AlertDialogUtil.showAlertDialog(context, "提示", "网络连接失败，请重试");
+                            }
+                        } else {
+                            AlertDialogUtil.showAlertDialog(context, "提示", "服务器返回数据有误");
+                        }
+                    } else {
+                        AlertDialogUtil.showAlertDialog(context, "提示", "网络连接失败，请重试");
+                    }
+                }
+            });
+        } else {
+            AlertDialogUtil.showAlertDialog(context, "温馨提示", "哎呀,无网络连接,请检查您的网络设置！");
+        }
+    }
+
+    private void updataOld() {
+        if (CommonWay.netWorkCheck(context)) { // 在有网络的情况下登入
+            JSONObject jsonObject = new JSONObject();
+            File file = new File(url);
+            String is = getBytesFromFile(file);
+            jsonObject.put("abc", "a");
+            jsonObject.put("file", is);
+            final String jsonCode = jsonObject.toJSONString();
+//                String MD5Result = MD5.stringMd5(jsonCode + Constants.key);
+            String methodName = "B002015";
+            HashMap<String, String> map = new HashMap<>();
+            map.put("jsoncode", jsonCode);
+//                map.put("token", MD5Result);
+
+            //通过工具类调用WebService接口
+            WebServiceUtils.callWebService(Constants.WEB_SERVER_URL, methodName, map, new WebServiceUtils.WebServiceCallBack() {
+                //WebService接口返回的数据回调到这个方法中
+                @Override
+                public void callBackSuccess(SoapObject result) {
+
+                    //关闭进度条
+                    if (result != null) {
+
+                        org.json.JSONObject jsonObject = CommonWay.parseSoapObjectUnicode(result);
+                        if (jsonObject != null) {
+                            try {
+                                String resultvalue = "";
+                                if (jsonObject.toString().contains("resultvalue")) {
+                                    resultvalue = jsonObject.getString("resultvalue");
+                                }
+                                if (resultvalue.equals("1") || resultvalue.equals("-1")) {
+                                    String errinfo = jsonObject.getString("errinfo");
+                                    //校验失败 是指token校验失败
+                                    Log.d("FAILURE_RESULT", errinfo);
+                                    AlertDialogUtil.showAlertDialog(context, "提示", "添加失败");
+                                } else if (resultvalue.equals("0")) {
+                                    Toast.makeText(PptOrQuestionActivity.this, "添加成功", Toast.LENGTH_SHORT).show();
+//                                    Intent intent = new Intent(context,ClassListActivity.class);
+//                                    startActivity(intent);
+                                    finish();
+                                }
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                                AlertDialogUtil.showAlertDialog(context, "提示", "网络连接失败，请重试");
+                            }
+                        } else {
+                            AlertDialogUtil.showAlertDialog(context, "提示", "服务器返回数据有误");
+                        }
+                    } else {
+                        AlertDialogUtil.showAlertDialog(context, "提示", "网络连接失败，请重试");
+                    }
+                }
+            });
+        } else {
+            AlertDialogUtil.showAlertDialog(context, "温馨提示", "哎呀,无网络连接,请检查您的网络设置！");
+        }
+    }
+
+    public static String getBytesFromFile(File file) {
+        String result = null;
+        byte[] ret = null;
+        try {
+            if (file == null) {
                 // log.error("helper:the file is null!");
                 return null;
             }
-            FileInputStream in=new FileInputStream(file);
-            ByteArrayOutputStream out=new ByteArrayOutputStream(4096);
-            byte[] b=new byte[4096];
+            FileInputStream in = new FileInputStream(file);
+            ByteArrayOutputStream out = new ByteArrayOutputStream(4096);
+            byte[] b = new byte[4096];
             int n;
-            while ((n= in.read(b))!=-1){
-                out.write(b,0, n);
+            while ((n = in.read(b)) != -1) {
+                out.write(b, 0, n);
             }
             in.close();
             out.close();
-            ret= out.toByteArray();
-            result  = Base64.encodeToString(ret, 0, ret.length,Base64.DEFAULT);
-        }catch (IOException e){
+            ret = out.toByteArray();
+            result = Base64.encodeToString(ret, 0, ret.length, Base64.DEFAULT);
+        } catch (IOException e) {
             // log.error("helper:get bytes from file process error!");
             e.printStackTrace();
         }
         return result;
     }
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 
@@ -201,6 +272,7 @@ public class PptOrQuestionActivity extends AppCompatActivity {
             Uri uri = data.getData();
             url = UriToFliePath.getPhotoPathFromContentUri(this, uri);
             path.setText(url);
+            file=new File(url);
         }
         super.onActivityResult(requestCode, resultCode, data);
     }
